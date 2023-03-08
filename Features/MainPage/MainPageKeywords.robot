@@ -4,8 +4,9 @@ Resource    Features/GlobalResources.robot
 *** Keywords ***
 Account name should be displayed
     Capture Page Screenshot
-    Wait Until Element Contains    ${accountsAndListsLink}
-    Element Should Contain    ${accountsAndListsLink}    "Hello, ${AccountName}"
+    Wait Until Element Is Visible    ${accountsAndListsLink}
+    ${actual}=    Get Text    ${accountsAndListsLink}
+    Should Contain    ${actual}    Hello, ${AccountName}
 
 Select Department
     [Arguments]    ${Department}

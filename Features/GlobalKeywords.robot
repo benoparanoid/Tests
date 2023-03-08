@@ -3,9 +3,9 @@ Resource    Features/GlobalResources.robot
 
 *** Keywords ***
 Open Browser and Maximize
-    Open Browser    https://www.google.com  ${Browser}
+    ${chromeOptions}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys, selenium.webdriver
+    Open Browser    https://www.google.com  ${Browser}   options=${chromeOptions}    executable_path=driver/chromedriver.exe
     Maximize Browser Window
-    Sleep    2000ms
 
 #Workaround since captcha is triggerring when directly navigating to amazon url
 Search and select Amazon on google

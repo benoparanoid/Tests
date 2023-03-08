@@ -1,0 +1,30 @@
+How to install robot framework
+
+1. Install python
+	- https://www.python.org/downloads/ 
+	- download the latest .pkg file and install
+	- check version using command python3 -V
+
+2. Install PIP
+	- PIP should be installed with python.
+	- check pip version by running pip3 -V
+
+3. Check that path for python and pip is added in Path.
+	For Mac:
+		- open terminal and run echo $PATH
+		- if not in path, add using
+		- nano ~/.zshrc
+		- export PATH=$PATH:/Library/Frameworks/Python.framework/Versions/3.11/bin
+
+4. Install robot framework
+	- run command    pip3 install robotframework
+
+5. Install selenium robot framework
+	- run command    pip3 install robotframework-seleniumlibrary
+
+6. Download and install PyCharm IDE
+	- https://www.jetbrains.com/pycharm/download/#section=mac
+
+7. Install IntelliBot @SeleniumLibrary Patched Plugin in PyCharm IDE
+
+8. Install Browser Drivers and update their paths

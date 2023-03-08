@@ -1,10 +1,11 @@
 *** Settings ***
 Resource    Features/GlobalResources.robot
 Suite Setup    Open Browser And Maximize
+Suite Teardown    Close Browser
 
 *** Test Cases ***
 Search Books via keyword with Language Filter
-    Given User Is At Amazon Webpage
+    Given user Is At Amazon Webpage
     When user searches for Keyword apple in Department Books
     And user filters to English Language
     And user sorts the result by Publication Date

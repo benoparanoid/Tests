@@ -1,6 +1,7 @@
 *** Settings ***
 Resource    Features/GlobalResources.robot
 Suite Setup    Open Browser And Maximize
+Suite Teardown    Close Browser
 
 *** Test Cases ***
 Search Books via keyword with Language Filter
